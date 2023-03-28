@@ -1,4 +1,86 @@
-body {
-    background-color: blue;
-  }
-  
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tim Fellin</title>
+    <style>
+      body {
+        background-color: #808080;
+      }
+      
+      .circle {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 50%;
+        background-color: #000000;
+        animation: changeColor 5s ease infinite;
+      }
+      
+      .text-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+      
+      .text-container span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+      }
+      
+      .text-container span::before {
+        content: 'TIM FELL';
+        display: inline-block;
+        transform-origin: 50% 100%;
+        transform: rotate(-10deg);
+      }
+      
+      .text-container span::after {
+        content: 'IN';
+        display: inline-block;
+        transform-origin: 50% 100%;
+        transform: rotate(15deg);
+      }
+      
+      @keyframes changeColor {
+        0% {
+          background-color: #A0522D; /* Sienna */
+        }
+        25% {
+          background-color: #CD853F; /* Peru */
+        }
+        50% {
+          background-color: #D2B48C; /* Tan */
+        }
+        75% {
+          background-color: #8B4513; /* Saddle Brown */
+        }
+        100% {
+          background-color: #A0522D; /* Sienna */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <div class="text-container">
+        <span></span>
+      </div>
+    </div>
+  </body>
+</html>
